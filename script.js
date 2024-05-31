@@ -28,7 +28,7 @@ async function swap(array, i, j, bars) {
     [array[i], array[j]] = [array[j], array[i]];
     bars[i].style.height = `${array[i]}px`;
     bars[j].style.height = `${array[j]}px`;
-    await sleep(100); // Adjust sleep time for visualization speed
+    await sleep(200); // Adjust sleep time for visualization speed
 }
 
 // Visualization function for Bubble Sort
