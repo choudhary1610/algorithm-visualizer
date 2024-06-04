@@ -3,19 +3,95 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Algorithm Visualizer</title>
+    <title>Sorting Algorithm Visualizer</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>Algorithm Visualizer</h1>
-    <div id="controls">
-        <button onclick="visualizeBubbleSort()">Bubble Sort</button>
-        <button onclick="visualizeQuickSort()">Quick Sort</button>
-        <button onclick="visualizeMergeSort()">Merge Sort</button>
-        <button onclick="visualizeInsertionSort()">Insertion Sort</button>
-        <!-- Add more buttons for other algorithms -->
-    </div>
-    <div id="visualization"></div>
+    <h1>Welcome to Sorting Algorithm Visualizer</h1>
+        <p>Select a sorting algorithm from the menu to see how it works.</p>
+    <nav>
+        <ul>
+            <!-- <li><a href="#" onclick="showSection('home')">Home</a></li> -->
+            <li><a href="#" onclick="showSection('bubbleSort')">Bubble Sort</a></li>
+            <li><a href="#" onclick="showSection('selectionSort')">Selection Sort</a></li>
+            <li><a href="#" onclick="showSection('insertionSort')">Insertion Sort</a></li>
+            <li><a href="#" onclick="showSection('mergeSort')">Merge Sort</a></li>
+            <li><a href="#" onclick="showSection('quickSort')">Quick Sort</a></li>
+            <li><a href="#" onclick="showSection('bucketSort')">Bucket Sort</a></li>
+            <li><a href="#" onclick="showSection('heapSort')">Heap Sort</a></li>
+            <li><a href="#" onclick="showSection('countingSort')">Counting Sort</a></li>
+            <li><a href="#" onclick="showSection('radixSort')">Radix Sort</a></li>
+        </ul>
+    </nav>
+
+    <!-- <section id="home">
+        <h1>Welcome to Sorting Algorithm Visualizer</h1>
+        <p>Select a sorting algorithm from the menu to see how it works.</p>
+    </section> -->
+
+    <section id="bubbleSort" class="algorithm">
+        <h2>Bubble Sort</h2>
+        <p id="bubbleSortDescription"></p>
+        <div id="bubbleSortVisualization" class="visualization"></div>
+        <button onclick="visualizeBubbleSort()">Visualize Bubble Sort</button>
+    </section>
+
+    <section id="selectionSort" class="algorithm">
+        <h2>Selection Sort</h2>
+        <p id="selectionSortDescription"></p>
+        <div id="selectionSortVisualization" class="visualization"></div>
+        <button onclick="visualizeSelectionSort()">Visualize Selection Sort</button>
+    </section>
+
+    <section id="insertionSort" class="algorithm">
+        <h2>Insertion Sort</h2>
+        <p id="insertionSortDescription"></p>
+        <div id="insertionSortVisualization" class="visualization"></div>
+        <button onclick="visualizeInsertionSort()">Visualize Insertion Sort</button>
+    </section>
+
+    <section id="mergeSort" class="algorithm">
+        <h2>Merge Sort</h2>
+        <p id="mergeSortDescription"></p>
+        <div id="mergeSortVisualization" class="visualization"></div>
+        <button onclick="visualizeMergeSort()">Visualize Merge Sort</button>
+    </section>
+
+    <section id="quickSort" class="algorithm">
+        <h2>Quick Sort</h2>
+        <p id="quickSortDescription"></p>
+        <div id="quickSortVisualization" class="visualization"></div>
+        <button onclick="visualizeQuickSort()">Visualize Quick Sort</button>
+    </section>
+
+    <section id="bucketSort" class="algorithm">
+        <h2>Bucket Sort</h2>
+        <p id="bucketSortDescription"></p>
+        <div id="bucketSortVisualization" class="visualization"></div>
+        <button onclick="visualizeBucketSort()">Visualize Bucket Sort</button>
+    </section>
+
+    <section id="heapSort" class="algorithm">
+        <h2>Heap Sort</h2>
+        <p id="heapSortDescription"></p>
+        <div id="heapSortVisualization" class="visualization"></div>
+        <button onclick="visualizeHeapSort()">Visualize Heap Sort</button>
+    </section>
+
+    <section id="countingSort" class="algorithm">
+        <h2>Counting Sort</h2>
+        <p id="countingSortDescription"></p>
+        <div id="countingSortVisualization" class="visualization"></div>
+        <button onclick="visualizeCountingSort()">Visualize Counting Sort</button>
+    </section>
+
+    <section id="radixSort" class="algorithm">
+        <h2>Radix Sort</h2>
+        <p id="radixSortDescription"></p>
+        <div id="radixSortVisualization" class="visualization"></div>
+        <button onclick="visualizeRadixSort()">Visualize Radix Sort</button>
+    </section>
+
     <script src="script.js"></script>
 </body>
 </html>
