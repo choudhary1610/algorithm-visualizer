@@ -9,7 +9,7 @@ function sleep(ms) {
     return new Promise(resolve => setTimeout(resolve, ms));
 }
 
-function generateRandomArray(size = 50, max = 300) {
+function generateRandomArray(size = 30, max = 300) {
     return Array.from({ length: size }, () => Math.floor(Math.random() * max) + 1);
 }
 
@@ -127,7 +127,7 @@ async function visualizeInsertionSort() {
 
 // Merge Sort
 async function visualizeMergeSort() {
-    setDescription('mergeSortDescription', "Merge Sort: An efficient, stable, comparison-based, divide and conquer sorting algorithm. Most implementations produce a stable sort, meaning that the implementation preserves the input order of equal elements in the sorted output.");
+    setDescription('mergeSortDescription', "Merge Sort: An efficient, stable, comparison-based, divide and conquer sorting algorithm. It continuously cuts down a list into multiple sublists until each has only one item, then merges those sublists into a sorted list. Most implementations produce a stable sort, meaning that the implementation preserves the input order of equal elements in the sorted output.");
     const array = generateRandomArray();
     const bars = createBars(array, 'mergeSortVisualization');
 
@@ -187,7 +187,7 @@ async function merge(array, left, middle, right, bars) {
 
 // Quick Sort
 async function visualizeQuickSort() {
-    setDescription('quickSortDescription', "Quick Sort: An efficient, comparison-based, divide and conquer sorting algorithm. When implemented well, it can be about two or three times faster than its main competitors, merge sort and heapsort.");
+    setDescription('quickSortDescription', "Quick Sort: An efficient, comparison-based, divide and conquer sorting algorithm. It works by selecting a 'pivot' element from the array and partitioning the other elements into two sub-arrays, according to whether they are less than or greater than the pivot. When implemented well, it can be about two or three times faster than its main competitors, merge sort and heapsort.");
     const array = generateRandomArray();
     const bars = createBars(array, 'quickSortVisualization');
 
@@ -241,7 +241,7 @@ async function bucketSort(array, bars) {
             array[index] = bucket[i][j];
             bars[index].style.height = `${array[index]}px`;
             bars[index].style.backgroundColor = 'green';
-            await sleep(300);
+            await sleep(500);
             index++;
         }
     }
