@@ -318,7 +318,7 @@ async function countingSort(array, bars) {
     for (let i = n - 1; i >= 0; i--) {
         output[count[array[i] - min] - 1] = array[i];
         count[array[i] - min]--;
-        await sleep(500);
+        await sleep(300);
     }
 
     for (let i = 0; i < n; i++) {
